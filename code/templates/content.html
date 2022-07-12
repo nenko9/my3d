@@ -1,0 +1,23 @@
+{% extends 'search.html' %}
+{% block content %}
+<div class="content_container">
+    <hr>
+    <ul>
+        {% for element in data %}
+        <li>
+            <div class="item_box">
+                <p>{{element.name}}</p>
+                <p>{{element.id}}</p>
+                <div>
+                    <img class="item_img"src={{element.preview_image}}>
+                </div>
+                <!-- <div>
+                    <a
+                        href="https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_auto/c_scale,w_700/ncom/en_US/games/switch/m/my-little-pony-a-maretime-bay-adventure-switch/hero">link</a>
+                </div> -->
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endblock %}
+</div>
